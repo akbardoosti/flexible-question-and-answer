@@ -1,0 +1,264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-04-06 23:52+0330\n"
+"PO-Revision-Date: 2023-04-06 23:57+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-wpxd-qa-plugin-admin.php:110
+msgid "Questions Settings"
+msgstr "تنظیمات سوالات"
+
+#: admin/class-wpxd-qa-plugin-admin.php:111
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: flexible-question-and-answer.php:108 templates/settings/fonts.php:175
+#: templates/settings/form-fields.php:203 templates/settings/form-style.php:37
+#: templates/settings/form-template.php:31 templates/settings/setting.php:46
+msgid "Update"
+msgstr "به روزرسانی"
+
+#: flexible-question-and-answer.php:132
+msgid "Detail"
+msgstr "جزئیات"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:12
+#: includes/class-wpxd-qa-plugin-post-types.php:24
+msgid "Questions"
+msgstr "سوالات"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:13
+msgid "Question"
+msgstr "سوال"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:14
+msgid "Add New"
+msgstr "افزودن جدید"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:15
+msgid "Add New Question"
+msgstr "افزودن سوال جدید"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:16
+msgid "Edit Question"
+msgstr "ویرایش سوال"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:17
+msgid "New Question"
+msgstr "سوال جدید"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:18
+msgid "All Questions"
+msgstr "همه سوالات"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:19
+msgid "View Question"
+msgstr "مشاهده سوال"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:20
+msgid "Search Questions"
+msgstr "جستجوی سوالات"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:21
+msgid "No Questions Found"
+msgstr "هیچ پرسشی پیدا نشد"
+
+#: includes/class-wpxd-qa-plugin-post-types.php:22
+msgid "No Questions found in Trash"
+msgstr "هیچ پرسشی ای در سطل زباله یافت نشد."
+
+#: includes/classes/class-wpxd-qa-settings.php:25
+msgid "Form fields"
+msgstr "فیلدهای فرم"
+
+#: includes/classes/class-wpxd-qa-settings.php:30
+msgid "Form template"
+msgstr "قالب فرم"
+
+#: includes/classes/class-wpxd-qa-settings.php:35
+msgid "Form style"
+msgstr "استایل فرم"
+
+#: includes/classes/class-wpxd-qa-settings.php:40
+msgid "Fonts"
+msgstr "فونت ها"
+
+#: includes/classes/class-wpxd-qa-settings.php:45
+msgid "Setting"
+msgstr "تنظیمات"
+
+#: templates/settings/fonts.php:2
+msgid "Add font"
+msgstr "افزودن فونت"
+
+#: templates/settings/fonts.php:15
+msgid "Font name"
+msgstr "نام فونت"
+
+#: templates/settings/fonts.php:21
+msgid "Font wight"
+msgstr "وزن فونت"
+
+#: templates/settings/fonts.php:27
+msgid "Font style"
+msgstr "استایل فونت"
+
+#: templates/settings/fonts.php:31
+msgid "Choose one item..."
+msgstr "یک مورد را انتخاب کنید ..."
+
+#: templates/settings/fonts.php:34
+msgid "Italic"
+msgstr "خمیده"
+
+#: templates/settings/fonts.php:37
+msgid "Underline"
+msgstr "زیرخط"
+
+#: templates/settings/fonts.php:48 templates/settings/fonts.php:90
+#: templates/settings/fonts.php:111 templates/settings/fonts.php:132
+#: templates/settings/fonts.php:153
+#, fuzzy
+#| msgid "File"
+msgid "WOFF File"
+msgstr "فایل"
+
+#: templates/settings/fonts.php:55 templates/settings/fonts.php:76
+#: templates/settings/fonts.php:97 templates/settings/fonts.php:118
+#: templates/settings/fonts.php:139 templates/settings/fonts.php:160
+msgid "Font File"
+msgstr "فایل فونت"
+
+#: templates/settings/fonts.php:63 templates/settings/fonts.php:84
+#: templates/settings/fonts.php:105 templates/settings/fonts.php:126
+#: templates/settings/fonts.php:147 templates/settings/fonts.php:168
+msgid "Upload"
+msgstr "بارگذاری"
+
+#: templates/settings/fonts.php:69
+msgid "WOFF2 File"
+msgstr ""
+
+#: templates/settings/form-fields.php:2
+msgid "Add field"
+msgstr "افزودن فیلد"
+
+#: templates/settings/form-fields.php:34
+msgid "New field"
+msgstr "فیلد جدید"
+
+#: templates/settings/form-fields.php:94
+msgid "Field type"
+msgstr "نوع فیلد"
+
+#: templates/settings/form-fields.php:98
+msgid "Please select one item."
+msgstr "لطفا یک مورد را انتخاب کنید"
+
+#: templates/settings/form-fields.php:104
+msgid "Select one item ..."
+msgstr "یکی را انتخاب کنید ..."
+
+#: templates/settings/form-fields.php:109
+msgid "File"
+msgstr "فایل"
+
+#: templates/settings/form-fields.php:114
+msgid "Text"
+msgstr "متن"
+
+#: templates/settings/form-fields.php:119
+msgid "Text area"
+msgstr "متن بزرگتر"
+
+#: templates/settings/form-fields.php:125
+msgid "Field name"
+msgstr "نام فیلد"
+
+#: templates/settings/form-fields.php:130
+msgid "Field name can't be empty"
+msgstr "نام فیلد نمی تواند خالی باشد"
+
+#: templates/settings/form-fields.php:137
+msgid "Field title"
+msgstr "عنوان فیلد"
+
+#: templates/settings/form-fields.php:145
+msgid "Field title can't be empty"
+msgstr "عنوان فیلد نمی تواند خالی باشد"
+
+#: templates/settings/form-fields.php:151
+msgid "Background color"
+msgstr "رنگ پس زمینه"
+
+#: templates/settings/form-fields.php:156
+msgid "Background color can't be empty"
+msgstr "رنگ پس زمینه نمیتواند خالی باشد"
+
+#: templates/settings/form-fields.php:164
+msgid "Text color"
+msgstr "رنگ متن"
+
+#: templates/settings/form-fields.php:169
+msgid "Text color can't be empty"
+msgstr "رنگ متن نمی تواند خالی باشد"
+
+#: templates/settings/form-fields.php:176
+msgid "Required"
+msgstr "الزامی"
+
+#: templates/settings/form-fields.php:186
+msgid "Validation error message"
+msgstr "پیام خطا"
+
+#: templates/settings/form-style.php:5
+msgid "Font"
+msgstr "فونت"
+
+#: templates/settings/form-style.php:9 templates/settings/form-style.php:12
+#: templates/settings/form-style.php:15 templates/settings/form-style.php:18
+msgid "Choose one item"
+msgstr ""
+
+#: templates/settings/form-style.php:24
+msgid "Font size(px)"
+msgstr "اندازه فونت(px)"
+
+#: templates/settings/form-style.php:30
+msgid "Input radius(px)"
+msgstr "شعاع ورودی(px)"
+
+#: templates/settings/form-template.php:2
+msgid "Add row"
+msgstr "افزودن ردیف"
+
+#: templates/settings/setting.php:5
+msgid "Shimmer effect"
+msgstr "افکت براق"
+
+#: templates/settings/setting.php:13
+msgid "SMS Enabled"
+msgstr "فعالسازی پیامک"
+
+#: templates/settings/setting.php:23
+msgid "SMS Token"
+msgstr "کلید API پیامک"
+
+#: templates/settings/setting.php:32
+msgid "SMS Text"
+msgstr "متن پیامک"
+
+#: templates/settings/setting.php:39
+msgid "Test"
+msgstr "تست"
