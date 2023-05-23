@@ -457,5 +457,3 @@ if($this->tab_list['form_fields']) {
     }
     
 </script>
-
-
