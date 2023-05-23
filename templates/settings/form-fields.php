@@ -1,5 +1,4 @@
 <?php 
-// echo "<pre>";var_export($this->tab_list['form_fields']['data']);echo "</pre>";
 if($this->tab_list['form_fields']) {
     $form_fields_data = $this->tab_list['form_fields']['data'];
 }
