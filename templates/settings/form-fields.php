@@ -1,6 +1,8 @@
-<?php echo "<pre>";var_export($this->tab_list['form_fields']);echo "</pre>";
-if($this->tab_list['form_fields'])
-$form_fields_data = $this->tab_list['form_fields']['data'];
+<?php 
+// echo "<pre>";var_export($this->tab_list['form_fields']['data']);echo "</pre>";
+if($this->tab_list['form_fields']) {
+    $form_fields_data = $this->tab_list['form_fields']['data'];
+}
 ?>
 <button class="wpxd-btn wpxd-light-blue wpxd-flex-start" onclick="wpxdAddField()">
     <?php _e("Add field", "wpxd-qa-plugin");?>
@@ -78,126 +80,256 @@ $form_fields_data = $this->tab_list['form_fields']['data'];
 </script>
 <form action="">
     <div class="wpxd-form-field">
-        <div class="wpxd-form-field__container">
-            <span class="wpxd-form-field__head " onclick="wpxdTriggerFieldFormCollapse(event)">
-                <i>
-                    <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1.3004 0.868835L4.93908 3.86578C5.36881 4.21971 6.07199 4.21971 6.50171 3.86578L10.1404 0.868835"
-                            stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </i>
-                <span>
-                    Title
-                </span>
-            </span>
-    
-            <div class="wpxd-form-container">
-                <div class="wpxd-input-group">
-                    
-                    <label class="wpxd-label">
-                        <?php echo __( "Field type", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <select
-                        class="wpxd-form-field__field_type"
-                        data-error="<?php echo __( 'Please select one item.', 'wpxd-qa-plugin'); ?>" 
-                        required 
-                        >
-                        <option
-                            value=""
-                        >
-                            <?php echo __( "Select one item ...", "wpxd-qa-plugin" ); ?>
-                        </option>
-                        <option
-                            value="file"
-                        >
-                            <?php echo __( "File", "wpxd-qa-plugin" ); ?>
-                        </option>
-                        <option
-                            value="text"
-                        >
-                            <?php echo __( "Text", "wpxd-qa-plugin" ); ?>
-                        </option>
-                        <option
-                            value="text-area"
-                        >
-                            <?php echo __( "Text area", "wpxd-qa-plugin" ); ?>
-                        </option>
-                    </select>
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Field name", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <input 
-                        type="text"
-                        class="wpxd-form-field__field_name"
-                        data-error="<?php echo __( 'Field name can\'t be empty', 'wpxd-qa-plugin'); ?>" 
-                        required 
-                        >
-                    
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Field title", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    
-                    <input 
-                        type="text" 
-                        class="wpxd-form-field__field_title"
-                        name="field_title" 
-                        oninput="wpxdChangeTitle(event)"
-                        data-error="<?php echo __( 'Field title can\'t be empty', 'wpxd-qa-plugin'); ?>" 
-                        required 
-                        />
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Background color", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <input 
-                        type="color"
-                        class="wpxd-form-field__field_bg_color"
-                        data-error="<?php echo __( 'Background color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
-                        required 
-                        value="#ffffff"
-                    >
-                    
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Text color", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <input 
-                        type="color"
-                        class="wpxd-form-field__field_text_color"
-                        data-error="<?php echo __( 'Text color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
-                        required 
-                    >
-                    
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Required", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <input 
-                        type="checkbox"
-                        class="wpxd-form-field__field_required"
-                        
-                        >
-                </div>
-                <div class="wpxd-input-group">
-                    <label class="wpxd-label">
-                        <?php echo __( "Validation error message", "wpxd-qa-plugin" ); ?>
-                    </label>
-                    <input 
-                        type="text"
-                        class="wpxd-form-field__field_validation_message"
-                    >
-                </div>
+        <?php if( count( $form_fields_data ) > 0 ):?>
+            <?php foreach( $form_fields_data as $key => $data ): ?>
+                <div class="wpxd-form-field__container">
+                    <span class="wpxd-form-field__head " onclick="wpxdTriggerFieldFormCollapse(event)">
+                        <i>
+                            <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.3004 0.868835L4.93908 3.86578C5.36881 4.21971 6.07199 4.21971 6.50171 3.86578L10.1404 0.868835"
+                                    stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </i>
+                        <span>
+                            <?php echo $data['title']; ?>
+                        </span>
+                    </span>
+            
+                    <div class="wpxd-form-container">
+                        <div class="wpxd-input-group">
+                            
+                            <label class="wpxd-label">
+                                <?php echo __( "Field type", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <select
+                                class="wpxd-form-field__field_type"
+                                data-error="<?php echo __( 'Please select one item.', 'wpxd-qa-plugin'); ?>" 
+                                required 
+                                >
+                                <option
+                                    value=""
+                                >
+                                    <?php echo __( "Select one item ...", "wpxd-qa-plugin" ); ?>
+                                </option>
+                                <option
+                                    value="file"
+                                    <?php echo 'file' == $data['type'] ? 'selected' : null; ?>
+                                >
+                                    <?php echo __( "File", "wpxd-qa-plugin" ); ?>
+                                </option>
+                                <option
+                                    value="text"
+                                    <?php echo 'text' == $data['type'] ? 'selected' : null; ?>
+                                >
+                                    <?php echo __( "Text", "wpxd-qa-plugin" ); ?>
+                                </option>
+                                <option
+                                    value="text-area"
+                                    <?php echo 'text-area' == $data['type'] ? 'selected' : null; ?>
+                                >
+                                    <?php echo __( "Text area", "wpxd-qa-plugin" ); ?>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Field name", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <input 
+                                type="text"
+                                class="wpxd-form-field__field_name"
+                                data-error="<?php echo __( 'Field name can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                                required 
+                                value="<?php echo $data['name']; ?>"
+                                >
+                            
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Field title", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            
+                            <input 
+                                type="text" 
+                                class="wpxd-form-field__field_title"
+                                name="field_title" 
+                                oninput="wpxdChangeTitle(event)"
+                                data-error="<?php echo __( 'Field title can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                                required 
+                                value="<?php echo $data['title']; ?>"
+                                />
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Background color", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <input 
+                                type="color"
+                                class="wpxd-form-field__field_bg_color"
+                                data-error="<?php echo __( 'Background color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                                required 
+                                value="<?php echo $data['bgColor']; ?>"
+                            >
+                            
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Text color", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <input 
+                                type="color"
+                                class="wpxd-form-field__field_text_color"
+                                data-error="<?php echo __( 'Text color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                                required 
+                                value="<?php echo $data['textColor']; ?>"
+                            />
+                            
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Required", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <input 
+                                type="checkbox"
+                                class="wpxd-form-field__field_required"
+                                <?php echo 'on' == $data['required'] ? 'checked':null; ?>
+                                >
+                        </div>
+                        <div class="wpxd-input-group">
+                            <label class="wpxd-label">
+                                <?php echo __( "Validation error message", "wpxd-qa-plugin" ); ?>
+                            </label>
+                            <input 
+                                type="text"
+                                class="wpxd-form-field__field_validation_message"
+                                value="<?php echo $data['validationMessage']; ?>"
+                            >
+                        </div>
 
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else:?>
+            <div class="wpxd-form-field__container">
+                <span class="wpxd-form-field__head " onclick="wpxdTriggerFieldFormCollapse(event)">
+                    <i>
+                        <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.3004 0.868835L4.93908 3.86578C5.36881 4.21971 6.07199 4.21971 6.50171 3.86578L10.1404 0.868835"
+                                stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </i>
+                    <span>
+                        <?php _e( 'New field', 'wpxd-qa-plugin'); ?>
+                    </span>
+                </span>
+        
+                <div class="wpxd-form-container">
+                    <div class="wpxd-input-group">
+                        
+                        <label class="wpxd-label">
+                            <?php echo __( "Field type", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <select
+                            class="wpxd-form-field__field_type"
+                            data-error="<?php echo __( 'Please select one item.', 'wpxd-qa-plugin'); ?>" 
+                            required 
+                            >
+                            <option
+                                value=""
+                            >
+                                <?php echo __( "Select one item ...", "wpxd-qa-plugin" ); ?>
+                            </option>
+                            <option
+                                value="file"
+                            >
+                                <?php echo __( "File", "wpxd-qa-plugin" ); ?>
+                            </option>
+                            <option
+                                value="text"
+                            >
+                                <?php echo __( "Text", "wpxd-qa-plugin" ); ?>
+                            </option>
+                            <option
+                                value="text-area"
+                            >
+                                <?php echo __( "Text area", "wpxd-qa-plugin" ); ?>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Field name", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <input 
+                            type="text"
+                            class="wpxd-form-field__field_name"
+                            data-error="<?php echo __( 'Field name can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                            required 
+                        />
+                        
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Field title", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        
+                        <input 
+                            type="text" 
+                            class="wpxd-form-field__field_title"
+                            name="field_title" 
+                            oninput="wpxdChangeTitle(event)"
+                            data-error="<?php echo __( 'Field title can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                            required 
+                        />
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Background color", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <input 
+                            type="color"
+                            class="wpxd-form-field__field_bg_color"
+                            data-error="<?php echo __( 'Background color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                            required 
+                        />
+                        
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Text color", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <input 
+                            type="color"
+                            class="wpxd-form-field__field_text_color"
+                            data-error="<?php echo __( 'Text color can\'t be empty', 'wpxd-qa-plugin'); ?>" 
+                            required 
+                        />
+                        
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Required", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <input 
+                            type="checkbox"
+                            class="wpxd-form-field__field_required"
+                            >
+                    </div>
+                    <div class="wpxd-input-group">
+                        <label class="wpxd-label">
+                            <?php echo __( "Validation error message", "wpxd-qa-plugin" ); ?>
+                        </label>
+                        <input 
+                            type="text"
+                            class="wpxd-form-field__field_validation_message"
+                        >
+                    </div>
+
+                </div>
             </div>
-        </div>
+        <?php endif;?>
     </div>
     
     
@@ -212,7 +344,7 @@ $form_fields_data = $this->tab_list['form_fields']['data'];
 
 <script defer>
     function wpxdSaveFormFields(event) {
-        // event.preventDefault();
+        event.preventDefault();
         const fields = [];
         const fieldContainers = document.querySelectorAll('.wpxd-form-field__container');
         fieldContainers.forEach( (item, index) => {
